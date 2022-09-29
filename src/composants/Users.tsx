@@ -30,7 +30,7 @@ const Users = () => {
     <>
         <Container className='mt-5'>
           <Row className='no-gutters justify-content-end'>
-            <Button variant="success mb-2" size="sm">Add testtt</Button>
+            <Button variant="success mb-2" size="sm">Add User</Button>
           </Row>
           <Table striped bordered>
             <thead>

@@ -1,11 +1,17 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { DataContext } from '../contexts/DataContext'
-import { Container, Table,Row,Button } from 'react-bootstrap'
+import { Container, Table,Row,Button,Modal } from 'react-bootstrap'
 import PostOne from './PostOne'
 import ReactPaginate from 'react-paginate'
 const Users = () => {
   const { state, dispatch } = useContext(DataContext)
+  const [show,setShow]=useState(false)
   const { posts } = state
+  const handleShow = () => setShow(true)
+  const handleClose = () => setShow(false)
+
+  
+
   const onDelete = (id: number) => {
     dispatch({ type: "DELETE", payload: id })
     setCurrentPage(1)
@@ -30,7 +36,7 @@ const Users = () => {
     <>
         <Container className='mt-5'>
           <Row className='no-gutters justify-content-end'>
-            <Button variant="success mb-2" size="sm">Add User</Button>
+            <Button variant="success mb-2" size="sm" onClick={handleShow} >Add User</Button>
           </Row>
           <Table striped bordered>
             <thead>
@@ -75,6 +81,16 @@ const Users = () => {
 
           />
         </Container>
+
+        <Modal show={show} onHide={handleClose} >
+          <Modal.Header closeButton>
+            <Modal.Title>Form d'Ajout</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>formulaire</Modal.Body>
+          <Modal.Footer className='d-flex justify-content-center'>
+            <Button variant="danger" size="sm" onClick={handleClose}>Cancel</Button>
+          </Modal.Footer>
+        </Modal>
       </>
 
   )

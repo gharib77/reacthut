@@ -3,6 +3,7 @@ import { DataContext } from '../contexts/DataContext'
 import { Container, Table,Row,Button,Modal } from 'react-bootstrap'
 import PostOne from './PostOne'
 import ReactPaginate from 'react-paginate'
+import FormAddUser from './FormAddUser'
 const Users = () => {
   const { state, dispatch } = useContext(DataContext)
   const [show,setShow]=useState(false)
@@ -82,11 +83,11 @@ const Users = () => {
           />
         </Container>
 
-        <Modal show={show} onHide={handleClose} >
+        <Modal show={show} onHide={handleClose} backdrop="static"  keyboard={false}>
           <Modal.Header closeButton>
             <Modal.Title>Form d'Ajout</Modal.Title>
           </Modal.Header>
-          <Modal.Body>formulaire</Modal.Body>
+          <Modal.Body><FormAddUser /></Modal.Body>
           <Modal.Footer className='d-flex justify-content-center'>
             <Button variant="danger" size="sm" onClick={handleClose}>Cancel</Button>
           </Modal.Footer>

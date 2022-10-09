@@ -1,9 +1,9 @@
 import React, { createContext } from "react";
-import {StatePost } from "../interfaces/interfaces";
+import {UserState1 } from "../interfaces/interfaces";
 import { UserType } from "./userReducer";
 
 type DataContextProps={
-  state:StatePost
+  state:UserState1
   dispatch:React.Dispatch<UserType>
 }
 

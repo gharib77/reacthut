@@ -1,0 +1,9 @@
+{
+  "users":[
+    {"id":1,"nom":"jouali","prenom":"gharib","age":34,"test":"2022-12-28"},
+    {"id":2,"nom":"baba","prenom":"mohammed","age":34,"test":"2022-12-28"},
+    {"id":3,"nom":"montassir","prenom":"abderrahim","age":34,"test":"2022-12-28"},
+    {"id":4,"nom":"idrissi","prenom":"brahim","age":34,"test":"2022-12-28"},
+    {"id":5,"nom":"allouch","prenom":"farid","age":34,"test":"2022-12-28"}
+  ]
+}
